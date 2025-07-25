@@ -1,16 +1,6 @@
-//arrays in ts
-let prices: number[] = [100, 75, 42];
-// prices.push('df')
 
-let fruit: string[] = ["apple", "orrange"];
-// fruit.push(23)
 
-// let randomValues:[] = ['hello']
-let emptyValues: number[] = [];
 
-let names = ['Rohan','milan',1,true]
-
-let array : (string | boolean)[] = ['apple',true,'orange',false]
 
 /* 
 console.log("type script tutorial");
@@ -65,4 +55,68 @@ for (let book of books) {
 // console.log(foundBook);
 
 console.log(foundBook?.length);
+
+//arrays in ts
+let prices: number[] = [100, 75, 42];
+// prices.push('df')
+
+let fruit: string[] = ["apple", "orrange"];
+// fruit.push(23)
+
+// let randomValues:[] = ['hello']
+let emptyValues: number[] = [];
+
+let names = ['Rohan','milan',1,true]
+
+let array : (string | boolean)[] = ['apple',true,'orange',false]
+
+//Object
+let car:{brand: string, year: number} = {brand:'toyota',year: 2020}
+console.log(car);
+car.brand = 'ford'
+// car.color = 'blue'
+
+let car1:{brand: string, year: number} = {brand:'audi',year: 2022}
+console.log(car1);
+
+let book = {title:'book', cost: 20}
+let pen = {title:'pen', cost: 10}
+let notebook = {title:'book'}
+
+
+let items: {readonly title: string, cost?: number}[] = [book,pen,notebook]
+// items[0].title = 'new book'
+
+//Function
+function sayHi(name:string) {
+  console.log("Hi!! " + name.toUpperCase());
+  
+}
+sayHi("Sonam")
+// sayHi(34)
+// -any --> avoid
+// -config --> can be used
+// -type --> best
+
+function calculateDiscount(price:number) {
+  const hasDiscount = true
+
+  if(hasDiscount) {
+    return 'Discount Applied'
+  }
+  return price * 0.9
+}
+const finalPrice = calculateDiscount(200)
+
+//any type
+function addThree(number:any) {
+  let anotherNumber:number = 3;
+  return number  + anotherNumber
+}
+
+const result = addThree(3)
+const someValue = result
+
+someValue.myMethod()
+
 */
